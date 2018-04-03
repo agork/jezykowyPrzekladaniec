@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="przekladaniec.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
 
@@ -12,6 +13,10 @@
     <label for="file">Wybierz plik .TXT</label>
     <input type="file" id="file" name="file" accept=".txt"/>
     <div id="drop">Lub przeciągnij tutaj</div>
+
+    <br><p>Przykładowy plik: <a href="zdania.txt">zdania.txt</a></p>
+    <p style="color:#bbb;font-size:0.8em;">Plik powinien zawierać zdania oddzielone enterami.</p>
+    <info>
   </div>
 
   <div id="score">
@@ -23,6 +28,16 @@
     <p style="font-size:25px;line-height:45px;">
       Czas: <span id="time"></span>
     </p>
+  </div>
+
+  <div id="winMessageBcg">
+    <div id="winMessage">
+      <div>
+        <p>Brawo! Udało Ci się pomyslnie ukończyć test.</p><br>
+        <p>Liczba błędów: <b><span id="errorsWin"></span></b></p>
+        <p>Twój czas: <b><span id="timeWin"></span></b></p>
+      </div>
+    </div>
   </div>
 
   <!-- <section class="riddle">

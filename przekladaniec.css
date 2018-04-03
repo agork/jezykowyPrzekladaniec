@@ -1,11 +1,3 @@
-/*
-#2681A3
-#544542
-#735567
-#E0808F
-#FFD2C1
-#FFF8E1
-*/
 *{
   margin:0;
   padding:0;
@@ -13,7 +5,7 @@
   box-sizing:border-box;
 }
 body{
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
 }
 
@@ -41,8 +33,8 @@ body{
   line-height: 100px;
   transition: 0.5s;
   background-size: 200% auto;
-  background-image: linear-gradient(to right, #ffecd2 0%,
-    #fcb69f 51%, #ffecd2 100%);
+  background-image: linear-gradient(to right, #d8d0ef 0%,
+    #c1bfea 51%, #d8d0ef 100%);
   border-radius: 20px 20px 0 0;
   cursor: pointer;
 }
@@ -67,10 +59,43 @@ body{
   position: fixed;
   top:0;
   display:none;
-  background-color: #ffc578;
-  background: linear-gradient(135deg, #ffc578 0%,#fb9d23 100%);
+  background: linear-gradient(135deg, #c1bfea 0%,#c1bfea 18%,
+    #d8d0ef 19%,#d8d0ef 41%,#cec7ec 43%,#cec7ec 62%,#d8d0ef 63%,
+    #d8d0ef 81%,#cec7ec 82%,#c1bfea 100%);
   z-index: 10;
   text-align: center;
+  font-weight: 500;
+}
+/* win */
+#winMessage{
+  height:200px;
+  width:400px;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px #544542;
+  text-align: center;
+  position: fixed;
+  top:50%;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px -6px black;
+  background-image: linear-gradient(to right, #d8d0ef 0%,
+    #c1bfea 51%, #d8d0ef 100%);
+  z-index: 11;
+}
+#winMessage>div{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+#winMessageBcg{
+  display: none;
+  width:100vw;
+  height:100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 11;
+  background-color: rgba(100,100,100,0.3);
 }
 /* riddle */
 .riddle{

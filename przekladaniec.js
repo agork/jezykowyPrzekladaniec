@@ -161,16 +161,17 @@ function furtherWorkSentences(){
 
 //total win function
 function totalWin(){
-  timer_is_on=0;
-  alert("Pomyślnie ukończyłeś/łaś test!\n"+
-  "Liczba błedów to: "+$("#errors").html()+
-  "\nUzyskany czas: "+$("#time").html());
+  clearTimeout(t);
+  $("body").css("overflow", "hidden");
+  $("#winMessageBcg").show();
+  $("#errorsWin").html($("#errors").html());
+  $("#timeWin").html($("#time").html());
 }
 
 //timer
-var c=0, minutes= 0, t, timer_is_on=0;
+var c=0, minutes= 0, t;
 
-function timedCount(){
+function clock(){
   if(c<10){
       c = "0"+c;
   }
@@ -180,12 +181,5 @@ function timedCount(){
     minutes+=1;
     c=0;
   }
-  t=setTimeout("timedCount()",1000);
-}
-
-function clock(){
-  if (!timer_is_on){
-      timer_is_on=1;
-      timedCount();
-  }
+  t=setTimeout("clock()",1000);
 }
