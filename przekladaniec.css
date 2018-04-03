@@ -1,0 +1,134 @@
+/*
+#2681A3
+#544542
+#735567
+#E0808F
+#FFD2C1
+#FFF8E1
+*/
+*{
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  box-sizing:border-box;
+}
+body{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* file */
+#fileContainer{
+  height:200px;
+  width:400px;
+  margin:auto;
+  border: solid 1px #544542;
+  text-align: center;
+  position: relative;
+  top:20vh;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px -6px black;
+}
+#file{
+  display: block;
+  width:100%;
+  height:100px;
+  opacity: 0;
+  cursor: pointer;
+}
+#fileContainer label{
+  display: block;
+  line-height: 100px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #ffecd2 0%,
+    #fcb69f 51%, #ffecd2 100%);
+  border-radius: 20px 20px 0 0;
+  cursor: pointer;
+}
+#fileContainer label:hover {
+  background-position: right center;
+}
+#drop{
+  border: 2px dashed #bbb;
+  border-radius: 0 0 15px 15px;
+  color: #bbb;
+  margin:10px;
+  width:380px;
+  line-height: 80px;
+  position: absolute;
+  top:97px;
+  z-index: -1;
+}
+/* score */
+#score{
+  height:100px;
+  width: 100%;
+  position: fixed;
+  top:0;
+  display:none;
+  background-color: #ffc578;
+  background: linear-gradient(135deg, #ffc578 0%,#fb9d23 100%);
+  z-index: 10;
+  text-align: center;
+}
+/* riddle */
+.riddle{
+  position: relative;
+  border: solid 1px #544542;
+  display: block;
+  float:none;
+  margin: 10px;
+  padding:10px;
+  top:100px;
+}
+.riddle>div{
+  height:45px;
+  width:100%;
+}
+.riddle>div>div{
+  display: inline-block;
+  cursor: pointer;
+  margin:3px;
+  border-radius: 5px;
+  padding:5px 3px 5px 8px;
+  transition-duration: 0.5s;
+}
+.finished{
+  background: linear-gradient(135deg, #c9de96 0%,#8ab66b 63%,#398235 100%);
+  cursor:not-allowed;
+}
+.wrong{
+  background: linear-gradient(135deg, #a55656 2%,#c42d2d 73%,#e52d2d 100%);
+}
+.finished div{
+  cursor:not-allowed !important;
+}
+.sentence>div{
+  background-color: #FFF8E1;
+  border: solid 1px #544542;
+  width:50px;
+}
+.sentence>.filled{
+  width:auto;
+}
+.sentence>div:hover{
+  background-color: #ffedb3;
+}
+.sentence>.focused{
+  background-color: #ffedb3;
+}
+.words>div{
+  background-color:#735567;
+  color:#FFF8E1;
+}
+.words>.empty{
+  display:none;
+}
+.words>div:hover{
+  background-color: #8b3c6b;
+}
+.words>.howMuch{
+  position: absolute;
+  display: none;
+}

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Językowy Przekładaniec</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="przekladaniec.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div id="fileContainer">
+    <label for="file">Wybierz plik .TXT</label>
+    <input type="file" id="file" name="file" accept=".txt"/>
+    <div id="drop">Lub przeciągnij tutaj</div>
+  </div>
+
+  <div id="score">
+    <p style="font-size:30px;line-height:55px;">
+      Wynik: <span id="doneSentences">0</span>
+      / <span id="totalSentences"></span>
+      Błędy: <span id="errors">0</span>
+    </p>
+    <p style="font-size:25px;line-height:45px;">
+      Czas: <span id="time"></span>
+    </p>
+  </div>
+
+  <!-- <section class="riddle">
+    <div class="sentence">
+      <div class="focused">&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+    </div>
+    <div class="words">
+      <span class="howMuch"></span>
+      <div nr="0">Ala&nbsp;</div><div>ma&nbsp;</div><div>psa&nbsp;</div><div>który&nbsp;</div><div>szczeka.&nbsp;</div>
+    </div>
+  </section> -->
+
+  <script src="przekladaniec.js"></script>
+</body>
+</html>
