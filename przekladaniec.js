@@ -109,11 +109,7 @@ function fileSelect(evt) {
     //getting sentences to var
     lines = fileData.split(/\n/);
     //some actions when sentences are loaded
-    $('#fileContainer').hide();
-    $("#score").slideDown();
-    clock();
-    //calling function that will work with sentences
-    furtherWorkSentences();
+    readySteadyGo();
   }
   reader.onload = function(evt) {
      //alert('Plik załadowano.');
@@ -123,6 +119,19 @@ function fileSelect(evt) {
   reader.readAsBinaryString(evt.target.files[0]);
 }
 $('#file').change(fileSelect);
+
+//ready screen
+function readySteadyGo(){
+  $('#fileContainer').hide();
+  $("#ready").show();
+  //calling function that will work with sentences
+  $("#ready").on("click", function(){
+    $("#ready").hide();
+    $("#score").slideDown();
+    clock();
+    furtherWorkSentences();
+  })
+}
 
 //Further work with loaded sentences
 var aRiddlePiece = '<section class="riddle workIP">' +

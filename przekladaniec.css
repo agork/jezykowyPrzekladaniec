@@ -52,6 +52,32 @@ body{
   top:97px;
   z-index: -1;
 }
+/* ready steady go */
+#ready{
+  display:none;
+  position: relative;
+  text-align: center;
+  top:25vh;
+}
+#ready button{
+  width:200px;
+  height:75px;
+  line-height: 75px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #d8d0ef 0%,
+    #c1bfea 51%, #d8d0ef 100%);
+  cursor: pointer;
+  border: solid 1px #544542;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px -6px black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 200;
+}
+#ready button:hover {
+  background-position: right center;
+}
 /* score */
 #score{
   height:100px;
