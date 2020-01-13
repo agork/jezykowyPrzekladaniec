@@ -1,0 +1,77 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.force-hide{
+  display:none !important;
+}
+
+.js-game-field{
+  width: 700px;
+  max-width: 100%;
+  margin: 80px auto;
+}
+
+.js-task-sentence{
+  margin: 15px 0;
+  padding: 10px 0px 0;
+  background-color: rgba(0,0,0,0.1);
+}
+.js-task-sentence.good-answer{
+  background-color: rgba(0,255,0,0.1);
+  pointer-events: none;
+}
+.js-task-sentence.bad-answer{
+  background-color: rgba(255,0,0,0.1);
+}
+.js-task-sentence .js-answer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.js-task-sentence .js-answer span{
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.1);
+  padding: 5px 8px;
+  margin: 0 5px;
+  border: 1px solid rgba(0,0,0,0);
+  margin-bottom: 10px;
+}
+.js-task-sentence .js-answer span.active{
+  border: 1px solid black;
+}
+.js-task-sentence .js-answer span.js-empty{
+  min-height: 36px;
+  min-width: 50px;
+}
+.js-task-sentence .js-question{
+  min-height: 56px;
+  padding: 10px 15px 0;
+}
+.js-task-sentence .js-question span{
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.1);
+  padding: 5px 8px;
+  margin: 0 5px;
+  border: 1px solid rgba(0,0,0,0);
+  margin-bottom: 10px;
+}
+.js-task-sentence .js-question span.js-used{
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  padding:0;
+  margin:0;
+  border:0;
+}
